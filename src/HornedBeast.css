@@ -1,0 +1,41 @@
+/* *react bootstrap 
+1. paste in code to install npm install, verify on package.json look for react bootstrap*/
+/* 2. import the style sheet, add to index.js before index.css */
+/* look for button   use import line code */
+
+/* bring in button to HORNED BEAST COMPONENT */
+/* main{
+  display:flex;
+  flex-wrap: wrap;
+
+} */
+
+#hbcard {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+}
+
+
+img{
+  /* max-width: 20vmax ; */
+  padding: 0.5vmax;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+#cardText{
+  padding:1vmax;
+  margin-bottom: auto;
+  /* flex-grow: 1; */
+}
+
+#clickMePar{
+  font-size: 1vmax;
+}
+
+#heartEmoji{
+  margin-top:auto;
+
+}
