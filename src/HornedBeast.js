@@ -29,7 +29,7 @@ class HornedBeast extends React.Component{
         </Card.Title>
         <Card.Text id="cardText"><p id='description'>{this.props.description}</p></Card.Text>
         <p id='clickMePar'>CLICK MY PICTURE IF I'M YOUR FAVORITE</p>
-        <p id='heartEmoji'>💖{this.state.imgClick}</p>
+        <p id='heartEmoji'><span>{"💖"}</span>{this.state.imgClick}</p>
       </Card.Body>
       </Card>
       </Col>
