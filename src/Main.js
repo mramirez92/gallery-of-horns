@@ -1,21 +1,39 @@
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
 import React from "react";
 import HornedBeast from "./HornedBeast";
+import data from './data.json';
+import './Main.css'
 
 class Main extends React.Component {
   render(){
+    // *render fires as soon as page gets mounted
+    let beasts =[];
+    data.forEach((animal,index) => {
+      beasts.push(
+        <HornedBeast
+        title={animal.title}
+        imageUrl={animal.image_url}
+        description= {animal.description}
+        // key is a unique identifier for each child, helps react keep track of elements in a list. used for whatever your mapping, using foreach
+        key={index}
+        />
+      )
+      
+    });
+
+    // anything under return is unreachable code
     return (
+      <>
+      
       <main>
-       <HornedBeast 
-       title= "Alpine Ibex" 
-       imageUrl=" https://factanimal.com/wp-content/uploads/2022/07/alpine-ibex-facts.jpg"
-       description ="This is a mysterious, wild goat that lives in the European alps. These creatures are adapted for thriving in open grasslands most often. Though Alpine ibex are obviously an exception – frequenting the monstrous and sublime heights of the alps." 
-       />
-       <HornedBeast 
-       title= "Dik-dik"
-       imageUrl ="https://cdn.britannica.com/35/151535-050-CB0E3646/Kirk-dik-dik.jpg"
-       description ="Dik-dik are a kind of miniature antelope, with hooves and (on the males anyway) horns. Dik-diks grow to only a foot or so high at the shoulder, which means they can hide among the grasses, but they prefer places where they can see a fair distance. They’re herbivores that eat leaves, fruit, berries and plant shoots, which provide both sustenance and water."
-       />
+        <Container>
+          <Row xs={1} sm ={2}md={4} lg={5}>
+        {beasts}
+        </Row>
+        </Container>
       </main>
+      </>
     )
   }
 }
