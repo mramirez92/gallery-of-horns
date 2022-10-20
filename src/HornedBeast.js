@@ -7,40 +7,48 @@ class HornedBeast extends React.Component{
   constructor(props){
     super(props);
     this.state={
-      imgClick:0,
+      imgHeart:0,
     }
   }
-  handleClick = ()=>{
+  handleHearts= ()=>{
     this.setState({
-      imgClick: this.state.imgClick +1
+      imgHeart: this.state.imgHeart +1
     })
   }
+  handleTitle = () => {
+    this.props.handleOpenModal(this.props.title)
+      
+    }
+  
     render(){
     return(
       <>
-      {/* grid */}
+
       <Col className= "m-4">
 
-      {/* <Col sm= {3} xs={2} md={4} lg={6}> */}
       <Card id = "hbcard" className = "p-2">
-      <Card.Img variant="top" src={this.props.imageUrl}alt={this.props.description}title={this.props.title} onClick={this.handleClick} />
+      <Card.Img 
+      variant="top" 
+      src={this.props.imageUrl}
+      alt={this.props.description}
+      title={this.props.title} 
+      onClick={this.props.handleOpenModal}/>
       <Card.Body>
-        <Card.Title>{this.props.title}
+        <Card.Title>
+          {this.props.title}
         </Card.Title>
-        <Card.Text id="cardText"><p id='description'>{this.props.description}</p></Card.Text>
-        <p id='clickMePar'>CLICK MY PICTURE IF I'M YOUR FAVORITE</p>
-        <p id='heartEmoji'><span>{"💖"}</span>{this.state.imgClick}</p>
+
+        <Card.Text id="cardText">
+          <p id='description'>
+            {this.props.description}
+          </p>
+        </Card.Text>
+
+        <p id='heartEmoji'onClick={this.handleHearts} >Show me some love
+        <span>{" 💖"}</span> {this.state.imgHeart}</p>
       </Card.Body>
       </Card>
       </Col>
-      
-      {/* <article>
-        <h2>{this.props.title}</h2>
-        <img src={this.props.imageUrl}alt={this.props.description}title={this.props.title} onClick={this.handleClick} />
-        <p>{this.props.description}</p>
-        <p>CLICK MY PICTURE IF I'M YOUR FAVORITE</p>
-        <p>💖{this.state.imgClick}</p>
-           </article> */}
     </>
     )
   };
