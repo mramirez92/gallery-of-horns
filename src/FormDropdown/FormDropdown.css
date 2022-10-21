@@ -1,0 +1,17 @@
+form{
+  margin-top: 1%;
+  padding: 0.8vmax;
+  background-color:rgb(255, 228, 244);
+  border-radius: 15px;
+  font-size: 1.5vmax;
+}
+
+div{
+  padding: 0.5vmax;
+}
+.form-select{
+  padding: 0.8vmax;
+}
+select.form-select{
+  font-size: 2 vmax;
+}
