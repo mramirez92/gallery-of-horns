@@ -6,8 +6,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: rgb(221, 182, 220);
+  display:flex;
+  justify-content: center;
 }
 header{
+  width: 100%;
   display:flex;
   justify-content: center;
   background-color: rgb(247, 241, 247);
@@ -21,7 +24,7 @@ footer{
   display:flex;
   justify-content: center;
   font-size: 1.5vmax;
-  background-color: rgb(221, 182, 247)
+  background-color: rgb(245, 232, 253)
 }
 
 code {
