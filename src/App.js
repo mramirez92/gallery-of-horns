@@ -3,7 +3,6 @@
 import React from 'react';
 import Header from './Header/Header.js';
 import FormDropdown from './FormDropdown/FormDropdown.js';
-import Form from 'react-bootstrap/Form';
 import Footer from './Footer.js';
 import Main from './Main/Main.js';
 import SelectedBeasts from './SelectedBeasts/SelectedBeasts.js';
